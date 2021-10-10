@@ -1,0 +1,30 @@
+{"books": [
+	{
+	"title" : "Why Zebras Don't Get Ulcers",
+	"author" : "Robert M. Sapolsky",
+	"subject" : "Psychology",
+	"pages" : "560",
+	"datepublished" : "09/15/2004"
+	},
+	{
+	"title" : "Blink",
+	"author" : "Malcolm Gladwell",
+	"subject" : "Psychology",
+	"pages" : "320",
+	"datepublished" : "01/11/2005"
+	},
+	{
+	"title" : "The Elephant in the Brain",
+	"author" : "Kevin Simler",
+	"subject" : "Psychology and Health",
+	"pages" : "416",
+	"datepublished" : "12/01/2017"
+	},
+	{
+	"title" : "The Elephant in the Brain",
+	"author" : "Robin Hanson",
+	"subject" : "Psychology and Health",
+	"pages" : "416",
+	"datepublished" : "12/01/2017"
+	}]
+}
