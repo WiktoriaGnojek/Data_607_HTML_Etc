@@ -1,0 +1,64 @@
+---
+title: "DATA 607"
+author: "Wiktoria Gnojek"
+date: "10/10/2021"
+output:
+  html_document: default
+  pdf_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<p style="color:blue">**Assignment – Working with XML and JSON in R**</p> 
+Pick three of your favorite books on one of your favorite subjects. At least one of the books should have more than one author. For each book, include the title, authors, and two or three other attributes that you find interesting.
+```{r}
+library(RCurl)
+library(XML)
+library(rjson)
+library(RJSONIO)
+```
+<p style="color:blue">**HTML Code**</p>
+
+Can we found here; https://github.com/WiktoriaGnojek/Data_607_HTML_Etc/blob/main/Books_HTML.html
+```{r}
+url.html <- htmlParse(getURL("https://raw.githubusercontent.com/WiktoriaGnojek/Data_607_HTML_Etc/main/Books_HTML.html"))
+url.html
+```
+<p style="color:blue">**Same Version of Code but in a Table Formal for HTML**</p>
+
+Can be found here; https://github.com/WiktoriaGnojek/Data_607_HTML_Etc/blob/main/code_html_table.html
+```{r}
+url_table.html <- htmlParse(getURL("https://raw.githubusercontent.com/WiktoriaGnojek/Data_607_HTML_Etc/main/code_html_table.html"))
+url_table.html
+```
+<p style="color:blue">**Table Version of Code**</p>
+```{r}
+html <- readHTMLTable(url_table.html)
+html
+```
+<p style="color:blue">**XML Code**</p>
+
+Can we found here; https://github.com/WiktoriaGnojek/Data_607_HTML_Etc/blob/main/Books_XML.xml
+```{r}
+library("XML")
+url.xml <- xmlParse(getURL("https://raw.githubusercontent.com/WiktoriaGnojek/Data_607_HTML_Etc/main/Books_XML.xml"))
+url.xml
+```
+<p style="color:blue">**Table Version of Code**</p>
+```{r}
+xml <-xmlToDataFrame(url.xml)
+xml
+```
+<p style="color:blue">**JSON Code**</p>
+
+Can be found here; https://github.com/WiktoriaGnojek/Data_607_HTML_Etc/blob/main/Books_JSON.json
+```{r}
+url.json <- "https://raw.githubusercontent.com/WiktoriaGnojek/Data_607_HTML_Etc/main/Books_JSON.json"
+isValidJSON(url.json)
+```
+<p style="color:blue">**Table Version of Code**</p>
+```{r}
+library(jsonlite)
+json <- fromJSON(url.json)
+json
+```
